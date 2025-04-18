@@ -38,9 +38,12 @@ body {
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   max-width: 700px;
-  width: 100%;
+  width: 90%; /* This is the key change */
+  margin: 0 auto; /* Center it */
+  box-sizing: border-box;
   transition: background-color 0.3s ease;
 }
+
 
 .top-bar {
   display: flex;
@@ -161,4 +164,14 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(24px);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.2rem;
+  }
+
+  textarea {
+    font-size: 14px;
+  }
 }
